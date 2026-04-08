@@ -26,3 +26,8 @@ env/
 *.db
 *.sqlite
 *.sqlite3
+
+# MkDocs output
+site/
+docs_build/
+site_build/
