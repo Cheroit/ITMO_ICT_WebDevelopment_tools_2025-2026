@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Maksim Ermakov">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Практика 1.2 - Отчеты по лабораторным работам</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Отчеты по лабораторным работам</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Главная</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Обзор</a>
+</li>
+                                    
+<li>
+    <a href="../practice-1-1/" class="dropdown-item">Практика 1.1</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Практика 1.2</a>
+</li>
+                                    
+<li>
+    <a href="../practice-1-3/" class="dropdown-item">Практика 1.3</a>
+</li>
+                                    
+<li>
+    <a href="../lab-1/" class="dropdown-item">Лабораторная работа 1</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../practice-1-1/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../practice-1-3/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#12" class="nav-link">Практическая работа 1.2</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Тема работы</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Что требовалось по заданию</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1-postgresql" class="nav-link">Шаг 1. Подключение PostgreSQL</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-orm-" class="nav-link">Шаг 2. Описание ORM-моделей</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3" class="nav-link">Шаг 3. Автоматическое создание таблиц</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-crud" class="nav-link">Шаг 4. CRUD для главной сущности</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5" class="nav-link">Шаг 5. Вложенное отображение связанных объектов</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-api" class="nav-link">Шаг 6. API для связанных сущностей</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_7" class="nav-link">Итог практической работы</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="12">Практическая работа 1.2</h1>
+<h2 id="_1">Тема работы</h2>
+<p>Во второй практике временная база данных была заменена на PostgreSQL, а модели переписаны на <code>SQLModel</code>. Основная задача этого этапа заключалась в переходе от списка словарей к полноценной ORM-модели с реальными таблицами, связями и запросами через сессии.</p>
+<h2 id="_2">Что требовалось по заданию</h2>
+<p>По итоговому заданию практики нужно было:</p>
+<ul>
+<li>подключить приложение к PostgreSQL;</li>
+<li>реализовать модели и API на SQLModel по своей теме;</li>
+<li>использовать связи <code>one-to-many</code> и <code>many-to-many</code>;</li>
+<li>сделать модели и API для many-to-many связи;</li>
+<li>реализовать вложенное отображение связанных объектов.</li>
+</ul>
+<p>Практика выполнена в папке <code>lr_1/practice_1_2</code>.</p>
+<h2 id="1-postgresql">Шаг 1. Подключение PostgreSQL</h2>
+<p>Для работы с БД был создан файл <code>connection.py</code>, в котором настраивается соединение, создание таблиц и выдача сессий.</p>
+<p>Ключевой код:</p>
+<pre><code class="language-python">from sqlmodel import SQLModel, Session, create_engine
+
+
+db_url = &quot;postgresql://postgres:1111@localhost/warriors_db&quot;
+engine = create_engine(db_url, echo=True)
+
+
+def init_db() -&gt; None:
+    SQLModel.metadata.create_all(engine)
+
+
+def get_session():
+    with Session(engine) as session:
+        yield session
+</code></pre>
+<p>Здесь:</p>
+<ul>
+<li><code>create_engine</code> создает подключение к PostgreSQL;</li>
+<li><code>echo=True</code> выводит SQL-запросы в консоль;</li>
+<li><code>init_db()</code> создает таблицы;</li>
+<li><code>get_session()</code> используется в <code>Depends</code>.</li>
+</ul>
+<h2 id="2-orm-">Шаг 2. Описание ORM-моделей</h2>
+<p>Во второй практике были реализованы следующие модели:</p>
+<ul>
+<li><code>Profession</code>;</li>
+<li><code>Skill</code>;</li>
+<li><code>Warrior</code>;</li>
+<li><code>SkillWarriorLink</code>.</li>
+</ul>
+<p>Дополнительно были созданы модели для чтения и обновления:</p>
+<ul>
+<li><code>ProfessionDefault</code>, <code>ProfessionRead</code>;</li>
+<li><code>SkillDefault</code>, <code>SkillRead</code>;</li>
+<li><code>WarriorDefault</code>, <code>WarriorRead</code>, <code>WarriorUpdate</code>;</li>
+<li><code>WarriorProfessions</code>, <code>WarriorWithRelations</code>;</li>
+<li><code>SkillWarriorLinkBase</code>.</li>
+</ul>
+<h3 id="_3">Основные связи</h3>
+<p>В проекте были реализованы две обязательные связи:</p>
+<ul>
+<li><code>Profession -&gt; Warrior</code> как <code>one-to-many</code>;</li>
+<li><code>Warrior &lt;-&gt; Skill</code> как <code>many-to-many</code>.</li>
+</ul>
+<p>Пример ассоциативной таблицы:</p>
+<pre><code class="language-python">class SkillWarriorLink(SkillWarriorLinkBase, table=True):
+    skill_id: Optional[int] = Field(
+        default=None, foreign_key=&quot;skill.id&quot;, primary_key=True
+    )
+    warrior_id: Optional[int] = Field(
+        default=None, foreign_key=&quot;warrior.id&quot;, primary_key=True
+    )
+</code></pre>
+<p>Пример главной таблицы:</p>
+<pre><code class="language-python">class Warrior(WarriorDefault, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    profession_id: Optional[int] = Field(default=None, foreign_key=&quot;profession.id&quot;)
+    profession: Optional[Profession] = Relationship(
+        back_populates=&quot;warriors_prof&quot;,
+        sa_relationship_kwargs={&quot;lazy&quot;: &quot;selectin&quot;},
+    )
+    skills: List[Skill] = Relationship(
+        back_populates=&quot;warriors&quot;,
+        link_model=SkillWarriorLink,
+        sa_relationship_kwargs={&quot;lazy&quot;: &quot;selectin&quot;},
+    )
+</code></pre>
+<h2 id="3">Шаг 3. Автоматическое создание таблиц</h2>
+<p>В <code>main.py</code> был добавлен обработчик старта приложения:</p>
+<pre><code class="language-python">@app.on_event(&quot;startup&quot;)
+def on_startup() -&gt; None:
+    init_db()
+</code></pre>
+<p>При запуске <code>uvicorn</code> таблицы создавались автоматически на основе <code>SQLModel.metadata</code>.</p>
+<h2 id="4-crud">Шаг 4. CRUD для главной сущности</h2>
+<p>После перехода на БД API перестал работать с временным списком и начал использовать <code>Session</code> и ORM-запросы.</p>
+<p>Получение списка:</p>
+<pre><code class="language-python">@app.get(&quot;/warriors_list&quot;, response_model=List[WarriorRead])
+def warriors_list(session: Session = Depends(get_session)) -&gt; List[Warrior]:
+    return session.exec(select(Warrior)).all()
+</code></pre>
+<p>Создание новой записи:</p>
+<pre><code class="language-python">@app.post(&quot;/warrior&quot;)
+def warriors_create(
+    warrior: WarriorDefault, session: Session = Depends(get_session)
+) -&gt; WarriorResponse:
+    if warrior.profession_id is not None:
+        _get_profession_or_404(session, warrior.profession_id)
+    db_warrior = Warrior.model_validate(warrior)
+    session.add(db_warrior)
+    session.commit()
+    session.refresh(db_warrior)
+    return {&quot;status&quot;: 200, &quot;data&quot;: db_warrior}
+</code></pre>
+<p>Частичное обновление:</p>
+<pre><code class="language-python">@app.patch(&quot;/warrior/{warrior_id}&quot;, response_model=WarriorProfessions)
+def warrior_update(
+    warrior_id: int, warrior: WarriorUpdate, session: Session = Depends(get_session)
+) -&gt; Warrior:
+    db_warrior = _get_warrior_or_404(session, warrior_id)
+    warrior_data = warrior.model_dump(exclude_unset=True)
+    ...
+</code></pre>
+<h2 id="5">Шаг 5. Вложенное отображение связанных объектов</h2>
+<p>Чтобы <code>GET /warrior/{warrior_id}</code> возвращал не только поля самого воина, но и связанные сущности, была введена отдельная модель ответа:</p>
+<pre><code class="language-python">class WarriorProfessions(WarriorRead):
+    profession: Optional[ProfessionRead] = None
+
+
+class WarriorWithRelations(WarriorProfessions):
+    skills: List[SkillRead] = []
+</code></pre>
+<p>Использование в эндпоинте:</p>
+<pre><code class="language-python">@app.get(&quot;/warrior/{warrior_id}&quot;, response_model=WarriorWithRelations)
+def warriors_get(warrior_id: int, session: Session = Depends(get_session)) -&gt; Warrior:
+    return _get_warrior_or_404(session, warrior_id)
+</code></pre>
+<p>В результате один запрос возвращал:</p>
+<ul>
+<li>данные воина;</li>
+<li>вложенную профессию;</li>
+<li>список связанных умений.</li>
+</ul>
+<h2 id="6-api">Шаг 6. API для связанных сущностей</h2>
+<p>В практике были реализованы не только маршруты для главной сущности, но и отдельные API для профессий, умений и таблицы связи.</p>
+<h3 id="_4">Эндпоинты для воинов</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/warriors_list</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/warrior/{warrior_id}</code></td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/warrior</code></td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/warrior/{warrior_id}</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/warrior/delete/{warrior_id}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">Эндпоинты для профессий</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/professions_list</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/profession/{profession_id}</code></td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/profession</code></td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/profession/{profession_id}</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/profession/delete/{profession_id}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">Эндпоинты для умений</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/skills_list</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/skill/{skill_id}</code></td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/skill</code></td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/skill/{skill_id}</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/skill/delete/{skill_id}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="many-to-many">Эндпоинты для many-to-many связи</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/skill_links</code></td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/skill_link/{warrior_id}/{skill_id}</code></td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/skill_link</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/skill_link/{warrior_id}/{skill_id}</code></td>
+</tr>
+</tbody>
+</table>
+<p>Пример создания связи:</p>
+<pre><code class="language-python">@app.post(&quot;/skill_link&quot;)
+def skill_link_create(
+    link: SkillWarriorLinkBase, session: Session = Depends(get_session)
+) -&gt; LinkResponse:
+    _get_warrior_or_404(session, link.warrior_id)
+    _get_skill_or_404(session, link.skill_id)
+    ...
+</code></pre>
+<h2 id="_7">Итог практической работы</h2>
+<p>Во второй практике проект перешел от учебной временной структуры к полноценному серверному приложению с PostgreSQL:</p>
+<ul>
+<li>подключена настоящая БД;</li>
+<li>реализованы таблицы на SQLModel;</li>
+<li>использованы <code>one-to-many</code> и <code>many-to-many</code> связи;</li>
+<li>сделаны CRUD-методы через ORM;</li>
+<li>реализовано вложенное отображение связанных объектов;</li>
+<li>добавлено API для связанной many-to-many сущности.</li>
+</ul>
+<p>Этот этап стал прямой основой для третьей практики, где к проекту были добавлены миграции, <code>.env</code> и более аккуратная структура.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
