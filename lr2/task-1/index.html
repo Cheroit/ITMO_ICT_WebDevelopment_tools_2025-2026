@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Maksim Ermakov">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Задача 1 - Отчеты по лабораторным работам</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Отчеты по лабораторным работам</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Главная</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../lr1/" class="dropdown-item">Обзор</a>
+</li>
+                                    
+<li>
+    <a href="../../lr1/practice-1-1/" class="dropdown-item">Практика 1.1</a>
+</li>
+                                    
+<li>
+    <a href="../../lr1/practice-1-2/" class="dropdown-item">Практика 1.2</a>
+</li>
+                                    
+<li>
+    <a href="../../lr1/practice-1-3/" class="dropdown-item">Практика 1.3</a>
+</li>
+                                    
+<li>
+    <a href="../../lr1/lab-1/" class="dropdown-item">Лабораторная работа 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 2</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Обзор</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Задача 1</a>
+</li>
+                                    
+<li>
+    <a href="../task-2/" class="dropdown-item">Задача 2</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../task-2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#1-threading-multiprocessing-async" class="nav-link">Задача 1. Сравнение threading, multiprocessing и async</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Постановка задачи</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Общий принцип решения</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Реализованные программы</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#threading" class="nav-link">Threading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#multiprocessing" class="nav-link">Multiprocessing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#async" class="nav-link">Async</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">Результаты запуска</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">Анализ результатов</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1" class="nav-link">Вывод по задаче 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="1-threading-multiprocessing-async">Задача 1. Сравнение threading, multiprocessing и async</h1>
+<h2 id="_1">Постановка задачи</h2>
+<p>Нужно написать три программы на Python, использующие разные подходы к параллельному выполнению:</p>
+<ul>
+<li><code>threading</code>;</li>
+<li><code>multiprocessing</code>;</li>
+<li><code>asyncio</code> и <code>async/await</code>.</li>
+</ul>
+<p>Каждая программа должна посчитать сумму всех чисел от <code>1</code> до <code>10_000_000_000_000</code>, разбить вычисление на несколько подзадач, измерить время выполнения и вывести результат.</p>
+<h2 id="_2">Общий принцип решения</h2>
+<p>Диапазон чисел делится на несколько частей. Каждая часть считается отдельно, затем частичные суммы складываются.</p>
+<p>Прямой цикл до <code>10_000_000_000_000</code> занял бы слишком много времени, поэтому сумма каждого диапазона считается по формуле арифметической прогрессии:</p>
+<pre><code class="language-python">(start + end) * (end - start + 1) // 2
+</code></pre>
+<p>Эта формула позволяет быстро получить сумму диапазона от <code>start</code> до <code>end</code> включительно.</p>
+<h2 id="_3">Реализованные программы</h2>
+<table>
+<thead>
+<tr>
+<th>Файл</th>
+<th>Подход</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lr_2/task_1/threading_sum.py</code></td>
+<td><code>threading</code></td>
+<td>Создает несколько потоков, каждый поток считает сумму своего диапазона</td>
+</tr>
+<tr>
+<td><code>lr_2/task_1/multiprocessing_sum.py</code></td>
+<td><code>multiprocessing</code></td>
+<td>Создает пул процессов и распределяет диапазоны между ними</td>
+</tr>
+<tr>
+<td><code>lr_2/task_1/async_sum.py</code></td>
+<td><code>asyncio</code></td>
+<td>Создает несколько асинхронных задач и ожидает их через <code>asyncio.gather</code></td>
+</tr>
+<tr>
+<td><code>lr_2/task_1/run_all.py</code></td>
+<td>общий запуск</td>
+<td>Последовательно запускает все три программы</td>
+</tr>
+</tbody>
+</table>
+<h2 id="threading">Threading</h2>
+<p>В файле <code>threading_sum.py</code> используется модуль <code>threading</code>.</p>
+<p>Главная идея:</p>
+<pre><code class="language-python">thread = threading.Thread(
+    target=worker,
+    args=(index, range_start, range_end, results),
+)
+thread.start()
+</code></pre>
+<p>Каждый поток вызывает функцию <code>worker</code>, которая считает сумму своего диапазона через <code>calculate_sum()</code> и записывает результат в общий список <code>results</code>.</p>
+<p>После запуска всех потоков основной поток вызывает:</p>
+<pre><code class="language-python">thread.join()
+</code></pre>
+<p>Метод <code>join()</code> нужен, чтобы дождаться завершения всех потоков перед подсчетом итоговой суммы.</p>
+<p>Особенность подхода: потоки имеют общую память, но в CPython ограничены GIL. Поэтому для CPU-bound задач <code>threading</code> обычно не дает полноценного ускорения на нескольких ядрах.</p>
+<h2 id="multiprocessing">Multiprocessing</h2>
+<p>В файле <code>multiprocessing_sum.py</code> используется модуль <code>multiprocessing</code>.</p>
+<p>Главная идея:</p>
+<pre><code class="language-python">with multiprocessing.Pool(processes=WORKERS_COUNT) as pool:
+    partial_sums = pool.starmap(calculate_sum, ranges)
+</code></pre>
+<p><code>Pool</code> создает несколько процессов. Метод <code>starmap</code> передает каждому процессу пару аргументов <code>(start, end)</code>.</p>
+<p>Особенность подхода: каждый процесс имеет собственную память и собственный интерпретатор Python. Это позволяет обходить ограничение GIL и использовать несколько ядер процессора. Но запуск процессов имеет заметные накладные расходы.</p>
+<h2 id="async">Async</h2>
+<p>В файле <code>async_sum.py</code> используется <code>asyncio</code>.</p>
+<p>Главная идея:</p>
+<pre><code class="language-python">tasks = [
+    asyncio.create_task(calculate_sum(range_start, range_end))
+    for range_start, range_end in ranges
+]
+partial_sums = await asyncio.gather(*tasks)
+</code></pre>
+<p>Создается несколько асинхронных задач, которые ожидаются через <code>asyncio.gather</code>.</p>
+<p>Особенность подхода: <code>asyncio</code> не создает несколько процессов и не выполняет CPU-код на нескольких ядрах. Он полезен прежде всего для I/O-bound задач, где программа много ждет.</p>
+<h2 id="_4">Результаты запуска</h2>
+<p>Фактические результаты запуска:</p>
+<table>
+<thead>
+<tr>
+<th>Подход</th>
+<th style="text-align: right;">Количество задач</th>
+<th style="text-align: right;">Сумма</th>
+<th>Проверка результата</th>
+<th style="text-align: right;">Время выполнения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>threading</code></td>
+<td style="text-align: right;">8 потоков</td>
+<td style="text-align: right;"><code>50000000000005000000000000</code></td>
+<td><code>True</code></td>
+<td style="text-align: right;"><code>0.000444</code> секунд</td>
+</tr>
+<tr>
+<td><code>multiprocessing</code></td>
+<td style="text-align: right;">8 процессов</td>
+<td style="text-align: right;"><code>50000000000005000000000000</code></td>
+<td><code>True</code></td>
+<td style="text-align: right;"><code>0.228731</code> секунд</td>
+</tr>
+<tr>
+<td><code>async/await</code></td>
+<td style="text-align: right;">8 асинхронных задач</td>
+<td style="text-align: right;"><code>50000000000005000000000000</code></td>
+<td><code>True</code></td>
+<td style="text-align: right;"><code>0.000150</code> секунд</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">Анализ результатов</h2>
+<p>Все три программы получили одинаковую сумму и прошли проверку результата.</p>
+<p>Быстрее всего в данном запуске отработал <code>async/await</code>, затем <code>threading</code>, затем <code>multiprocessing</code>. Такой результат объясняется тем, что вычисление выполняется по формуле и занимает очень мало времени. Поэтому на первый план выходят накладные расходы:</p>
+<ul>
+<li><code>asyncio</code> создает легковесные задачи внутри одного event loop;</li>
+<li><code>threading</code> создает потоки внутри одного процесса;</li>
+<li><code>multiprocessing</code> создает отдельные процессы, что заметно дороже.</li>
+</ul>
+<p>Важно, что этот результат не означает, что <code>asyncio</code> лучше подходит для тяжелых вычислений. Для реальных CPU-bound задач предпочтительнее <code>multiprocessing</code>, потому что процессы могут выполняться на разных ядрах и не ограничиваются одним общим GIL. <code>asyncio</code> лучше использовать для задач, связанных с ожиданием сети, файлов или базы данных.</p>
+<h2 id="1">Вывод по задаче 1</h2>
+<p>Задача показала различие между тремя моделями выполнения. <code>threading</code> и <code>asyncio</code> имеют меньшие накладные расходы на коротком вычислении, а <code>multiprocessing</code> показывает большую стоимость запуска процессов. При этом для тяжелых вычислительных задач именно <code>multiprocessing</code> остается наиболее подходящим вариантом.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

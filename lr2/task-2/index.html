@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Maksim Ermakov">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Задача 2 - Отчеты по лабораторным работам</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Отчеты по лабораторным работам</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Главная</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../lr1/" class="dropdown-item">Обзор</a>
+</li>
+                                    
+<li>
+    <a href="../../lr1/practice-1-1/" class="dropdown-item">Практика 1.1</a>
+</li>
+                                    
+<li>
+    <a href="../../lr1/practice-1-2/" class="dropdown-item">Практика 1.2</a>
+</li>
+                                    
+<li>
+    <a href="../../lr1/practice-1-3/" class="dropdown-item">Практика 1.3</a>
+</li>
+                                    
+<li>
+    <a href="../../lr1/lab-1/" class="dropdown-item">Лабораторная работа 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 2</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Обзор</a>
+</li>
+                                    
+<li>
+    <a href="../task-1/" class="dropdown-item">Задача 1</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Задача 2</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../task-1/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#2-" class="nav-link">Задача 2. Параллельный парсинг веб-страниц</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Постановка задачи</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1" class="nav-link">Связь с базой данных ЛР 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#url-" class="nav-link">URL-адреса для парсинга</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parser_commonpy" class="nav-link">Общий модуль parser_common.py</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#threading" class="nav-link">Threading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#multiprocessing" class="nav-link">Multiprocessing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#async" class="nav-link">Async</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Результаты запуска</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Анализ результатов</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2" class="nav-link">Вывод по задаче 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="2-">Задача 2. Параллельный парсинг веб-страниц</h1>
+<h2 id="_1">Постановка задачи</h2>
+<p>Нужно написать три программы для параллельного парсинга нескольких веб-страниц с сохранением результата в базу данных:</p>
+<ul>
+<li>через <code>threading</code>;</li>
+<li>через <code>multiprocessing</code>;</li>
+<li>через <code>asyncio</code> и <code>aiohttp</code>.</li>
+</ul>
+<p>Каждая программа должна содержать функцию <code>parse_and_save(url)</code>, которая загружает HTML-страницу, извлекает заголовок страницы, сохраняет данные в базу данных и выводит результат на экран.</p>
+<h2 id="1">Связь с базой данных ЛР 1</h2>
+<p>В лабораторной работе 1 была реализована база данных тайм-менеджера. Основная таблица этой предметной области — <code>Task</code>.</p>
+<p>Во второй задаче парсер загружает страницы официальной документации Python и сохраняет их как учебные задачи:</p>
+<table>
+<thead>
+<tr>
+<th>Поле таблицы <code>Task</code></th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td><code>Изучить материал: &lt;заголовок страницы&gt;</code></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td><code>Учебный источник: &lt;URL&gt;</code></td>
+</tr>
+<tr>
+<td><code>priority</code></td>
+<td><code>medium</code></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td><code>planned</code></td>
+</tr>
+<tr>
+<td><code>category_id</code></td>
+<td>категория <code>Учебные материалы Python</code></td>
+</tr>
+</tbody>
+</table>
+<p>Таким образом, парсер не сохраняет случайные данные, а автоматически формирует список задач на изучение материалов Python.</p>
+<h2 id="url-">URL-адреса для парсинга</h2>
+<p>В качестве источников используются страницы документации Python:</p>
+<table>
+<thead>
+<tr>
+<th>Тема</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>threading</code></td>
+<td><code>https://docs.python.org/3/library/threading.html</code></td>
+</tr>
+<tr>
+<td><code>multiprocessing</code></td>
+<td><code>https://docs.python.org/3/library/multiprocessing.html</code></td>
+</tr>
+<tr>
+<td><code>asyncio</code></td>
+<td><code>https://docs.python.org/3/library/asyncio.html</code></td>
+</tr>
+<tr>
+<td><code>html.parser</code></td>
+<td><code>https://docs.python.org/3/library/html.parser.html</code></td>
+</tr>
+<tr>
+<td><code>urllib.request</code></td>
+<td><code>https://docs.python.org/3/library/urllib.request.html</code></td>
+</tr>
+<tr>
+<td><code>sqlite3</code></td>
+<td><code>https://docs.python.org/3/library/sqlite3.html</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parser_commonpy">Общий модуль parser_common.py</h2>
+<p>Общая логика вынесена в файл <code>lr_2/task_2/parser_common.py</code>, чтобы не дублировать один и тот же код в трех программах.</p>
+<p>В этом модуле находятся:</p>
+<table>
+<thead>
+<tr>
+<th>Элемент</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>URLS</code></td>
+<td>список страниц для парсинга</td>
+</tr>
+<tr>
+<td><code>split_urls()</code></td>
+<td>разбиение списка URL на части</td>
+</tr>
+<tr>
+<td><code>fetch_html()</code></td>
+<td>синхронная загрузка HTML для <code>threading</code> и <code>multiprocessing</code></td>
+</tr>
+<tr>
+<td><code>TitleParser</code></td>
+<td>HTML-парсер для извлечения содержимого тега <code>&lt;title&gt;</code></td>
+</tr>
+<tr>
+<td><code>extract_title()</code></td>
+<td>функция извлечения заголовка страницы</td>
+</tr>
+<tr>
+<td><code>save_title_to_db()</code></td>
+<td>сохранение или обновление задачи в базе данных</td>
+</tr>
+<tr>
+<td><code>parse_and_save_sync()</code></td>
+<td>полный синхронный цикл обработки одного URL</td>
+</tr>
+</tbody>
+</table>
+<p>Для повторного запуска используется обновление существующих записей. Если задача с таким <code>description</code> уже есть в базе, программа обновляет ее, а не создает дубль.</p>
+<h2 id="threading">Threading</h2>
+<p>Файл <code>lr_2/task_2/threading_parser.py</code> использует модуль <code>threading</code>.</p>
+<p>Список URL делится на части:</p>
+<pre><code class="language-python">url_chunks = split_urls(URLS, PARSER_WORKERS_COUNT)
+</code></pre>
+<p>Для каждой части создается поток:</p>
+<pre><code class="language-python">thread = threading.Thread(target=worker, args=(chunk, results))
+thread.start()
+</code></pre>
+<p>Каждый поток выполняет <code>worker</code>, который последовательно вызывает <code>parse_and_save(url)</code> для своей части URL.</p>
+<p>Особенность подхода: потоки хорошо подходят для сетевого парсинга, потому что пока один поток ждет ответ сайта, другие потоки могут продолжать работу.</p>
+<h2 id="multiprocessing">Multiprocessing</h2>
+<p>Файл <code>lr_2/task_2/multiprocessing_parser.py</code> использует <code>multiprocessing.Pool</code>.</p>
+<p>Основной фрагмент:</p>
+<pre><code class="language-python">with multiprocessing.Pool(processes=PARSER_WORKERS_COUNT) as pool:
+    chunk_results = pool.map(worker, url_chunks)
+</code></pre>
+<p>Каждый процесс получает свою часть URL и возвращает список результатов.</p>
+<p>Особенность подхода: процессы имеют отдельную память, поэтому программа не использует общий список результатов. Вместо этого каждый процесс возвращает данные родительскому процессу через <code>pool.map</code>.</p>
+<p>Для парсинга веб-страниц <code>multiprocessing</code> обычно менее выгоден, чем <code>threading</code> или <code>asyncio</code>, потому что задача в основном ожидает сеть, а создание процессов добавляет накладные расходы.</p>
+<h2 id="async">Async</h2>
+<p>Файл <code>lr_2/task_2/async_parser.py</code> использует <code>asyncio</code> и <code>aiohttp</code>.</p>
+<p>HTML загружается асинхронно:</p>
+<pre><code class="language-python">async with session.get(url) as response:
+    response.raise_for_status()
+    return await response.text()
+</code></pre>
+<p>Асинхронные работники создаются через:</p>
+<pre><code class="language-python">tasks = [
+    asyncio.create_task(worker(session, chunk))
+    for chunk in url_chunks
+]
+chunk_results = await asyncio.gather(*tasks)
+</code></pre>
+<p>Так как SQLModel работает синхронно, сохранение в базу данных запускается через:</p>
+<pre><code class="language-python">task_id, action = await asyncio.to_thread(save_title_to_db, url, title)
+</code></pre>
+<p>Это позволяет не блокировать event loop во время записи в базу.</p>
+<h2 id="_2">Результаты запуска</h2>
+<p>Фактические результаты запуска:</p>
+<table>
+<thead>
+<tr>
+<th>Подход</th>
+<th style="text-align: right;">Количество работников</th>
+<th style="text-align: right;">Успешно обработано страниц</th>
+<th style="text-align: right;">Время выполнения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>threading</code></td>
+<td style="text-align: right;">3 потока</td>
+<td style="text-align: right;"><code>6/6</code></td>
+<td style="text-align: right;"><code>1.665542</code> секунд</td>
+</tr>
+<tr>
+<td><code>multiprocessing</code></td>
+<td style="text-align: right;">3 процесса</td>
+<td style="text-align: right;"><code>6/6</code></td>
+<td style="text-align: right;"><code>2.305063</code> секунд</td>
+</tr>
+<tr>
+<td><code>async/await</code></td>
+<td style="text-align: right;">3 асинхронные задачи</td>
+<td style="text-align: right;"><code>6/6</code></td>
+<td style="text-align: right;"><code>0.819932</code> секунд</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">Анализ результатов</h2>
+<p>Все три подхода успешно обработали 6 страниц из 6 и сохранили данные в базу.</p>
+<p>Первый запуск создал записи в таблице <code>Task</code>, поэтому вывод содержал <code>created</code>. Следующие запуски обновили те же записи, поэтому вывод содержал <code>updated</code>. Это корректное поведение, потому что программа ищет существующую задачу по URL в поле <code>description</code> и не создает дубликаты.</p>
+<p>Лучшее время показал <code>async/await</code> — <code>0.819932</code> секунд. Это ожидаемо, потому что парсинг веб-страниц относится к I/O-bound задачам. Основное время программа ожидает ответы сайтов и операции ввода-вывода, а <code>asyncio</code> эффективно переключается между задачами в точках <code>await</code>.</p>
+<p><code>threading</code> также хорошо подходит для сетевых задач, но имеет больше накладных расходов, чем асинхронные задачи. В данном запуске он занял <code>1.665542</code> секунд.</p>
+<p><code>multiprocessing</code> оказался самым медленным — <code>2.305063</code> секунд. Для сетевого парсинга процессы обычно избыточны: создание процессов, передача данных и сбор результатов добавляют расходы, а преимущества выполнения на разных ядрах почти не используются.</p>
+<h2 id="2">Вывод по задаче 2</h2>
+<p>Для параллельного парсинга веб-страниц наиболее эффективным оказался асинхронный подход с <code>asyncio</code> и <code>aiohttp</code>. <code>threading</code> также подходит для I/O-bound задач, но уступил по времени. <code>multiprocessing</code> лучше применять для CPU-bound вычислений, а не для задач, где основное время занимает ожидание сети.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
