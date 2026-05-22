@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from api.categories import router as categories_router
 from api.daily_plans import router as daily_plans_router
 from api.links import router as links_router
+from api.parser import router as parser_router
 from api.tags import router as tags_router
 from api.tasks import router as tasks_router
 from api.time_entries import router as time_entries_router
@@ -30,5 +31,6 @@ app.include_router(tasks_router)
 app.include_router(time_entries_router)
 app.include_router(daily_plans_router)
 app.include_router(links_router)
+app.include_router(parser_router)
 app.include_router(auth_router)
 app.include_router(users_router)

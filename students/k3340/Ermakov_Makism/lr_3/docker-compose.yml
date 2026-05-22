@@ -1,0 +1,82 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: time-manager-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "1111"
+      POSTGRES_DB: time_manager_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d time_manager_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: time-manager-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ..
+      dockerfile: lr_3/api.Dockerfile
+    container_name: time-manager-api
+    environment:
+      DB_ADMIN: postgresql://postgres:1111@db:5432/time_manager_db
+      JWT_SECRET: time_manager_secret_key
+      JWT_EXPIRE_MINUTES: "60"
+      PARSER_API_URL: http://parser:8001
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      parser:
+        condition: service_started
+
+  parser:
+    build:
+      context: ..
+      dockerfile: lr_3/parser.Dockerfile
+    container_name: time-manager-parser
+    environment:
+      DB_ADMIN: postgresql://postgres:1111@db:5432/time_manager_db
+    ports:
+      - "8001:8001"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  celery-worker:
+    build:
+      context: ..
+      dockerfile: lr_3/api.Dockerfile
+    container_name: time-manager-celery-worker
+    command: ["celery", "-A", "core.celery_app.celery_app", "worker", "--loglevel=info"]
+    environment:
+      PARSER_API_URL: http://parser:8001
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+    depends_on:
+      redis:
+        condition: service_healthy
+      parser:
+        condition: service_started
+
+volumes:
+  postgres_data:
