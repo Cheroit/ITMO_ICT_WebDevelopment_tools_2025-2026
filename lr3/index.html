@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Maksim Ermakov">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Обзор - Отчеты по лабораторным работам</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Отчеты по лабораторным работам</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Главная</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lr1/" class="dropdown-item">Обзор</a>
+</li>
+                                    
+<li>
+    <a href="../lr1/practice-1-1/" class="dropdown-item">Практика 1.1</a>
+</li>
+                                    
+<li>
+    <a href="../lr1/practice-1-2/" class="dropdown-item">Практика 1.2</a>
+</li>
+                                    
+<li>
+    <a href="../lr1/practice-1-3/" class="dropdown-item">Практика 1.3</a>
+</li>
+                                    
+<li>
+    <a href="../lr1/lab-1/" class="dropdown-item">Лабораторная работа 1</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 2</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../lr2/" class="dropdown-item">Обзор</a>
+</li>
+                                    
+<li>
+    <a href="../lr2/task-1/" class="dropdown-item">Задача 1</a>
+</li>
+                                    
+<li>
+    <a href="../lr2/task-2/" class="dropdown-item">Задача 2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 3</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Обзор</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../lr2/task-2/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#3" class="nav-link">Лабораторная работа 3</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Тема и цель</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Что уже было реализовано ранее</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3_1" class="nav-link">Структура лабораторной работы 3</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#http-" class="nav-link">HTTP-приложение парсера</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fastapi" class="nav-link">Вызов парсера из основного FastAPI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Вызов парсера через очередь</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dockerfile-api" class="nav-link">Dockerfile основного API</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dockerfile" class="nav-link">Dockerfile парсера</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#docker-compose" class="nav-link">Docker Compose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">Запуск</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">Проверка результата</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_6" class="nav-link">Вывод</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="3">Лабораторная работа 3</h1>
+<h2 id="_1">Тема и цель</h2>
+<p>Тема лабораторной работы: <code>Упаковка FastAPI приложения в Docker, работа с источниками данных и очереди</code>.</p>
+<p>Цель работы — упаковать уже разработанное FastAPI-приложение, базу данных и парсер данных в Docker, реализовать HTTP-вызов парсера из основного API и добавить фоновый запуск парсинга через Celery и Redis.</p>
+<h2 id="_2">Что уже было реализовано ранее</h2>
+<p>В лабораторной работе 1 было создано основное приложение <code>Time Manager API</code>:</p>
+<ul>
+<li>FastAPI-приложение;</li>
+<li>модели SQLModel;</li>
+<li>подключение к PostgreSQL;</li>
+<li>CRUD-эндпоинты для задач, категорий, тегов, учета времени и ежедневных планов;</li>
+<li>JWT-аутентификация.</li>
+</ul>
+<p>В лабораторной работе 2 был создан парсер данных:</p>
+<ul>
+<li>загружает HTML-страницы документации Python;</li>
+<li>извлекает содержимое тега <code>&lt;title&gt;</code>;</li>
+<li>сохраняет результат в базу данных лабораторной работы 1;</li>
+<li>создает или обновляет задачи в таблице <code>Task</code>.</li>
+</ul>
+<h2 id="3_1">Структура лабораторной работы 3</h2>
+<p>Код лабораторной работы находится в папке <code>lr_3</code>.</p>
+<pre><code class="language-text">lr_3/
+├─ parser_service/
+│  ├─ __init__.py
+│  └─ main.py
+├─ api.Dockerfile
+├─ parser.Dockerfile
+├─ docker-compose.yml
+├─ requirements-api.txt
+├─ requirements-parser.txt
+└─ README.md
+</code></pre>
+<h2 id="http-">HTTP-приложение парсера</h2>
+<p>Для вызова парсера по HTTP создано отдельное FastAPI-приложение <code>parser_service</code>.</p>
+<p>Основные эндпоинты:</p>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>URL</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/</code></td>
+<td>проверка запуска сервиса</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/health</code></td>
+<td>healthcheck сервиса</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/urls</code></td>
+<td>список стандартных URL из ЛР 2</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/parse</code></td>
+<td>парсинг одного URL</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/parse/default</code></td>
+<td>парсинг стандартного набора URL</td>
+</tr>
+</tbody>
+</table>
+<p>Пример запроса:</p>
+<pre><code class="language-bash">curl -X POST http://localhost:8001/parse \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;url&quot;:&quot;https://docs.python.org/3/library/asyncio.html&quot;}'
+</code></pre>
+<p>Парсер использует общую функцию <code>parse_and_save_sync()</code> из <code>lr_2/task_2/parser_common.py</code>, поэтому результат сохраняется в ту же базу данных и в ту же таблицу <code>Task</code>.</p>
+<h2 id="fastapi">Вызов парсера из основного FastAPI</h2>
+<p>В основное приложение из <code>lr_1/lab_1</code> добавлен роутер <code>api/parser.py</code>.</p>
+<p>Новый эндпоинт:</p>
+<pre><code class="language-text">POST /parser/parse
+</code></pre>
+<p>Он принимает URL от клиента, отправляет HTTP-запрос в отдельный контейнер <code>parser</code> и возвращает клиенту ответ parser-сервиса.</p>
+<p>Пример запроса:</p>
+<pre><code class="language-bash">curl -X POST http://localhost:8000/parser/parse \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;url&quot;:&quot;https://docs.python.org/3/library/asyncio.html&quot;}'
+</code></pre>
+<p>В Docker Compose адрес parser-сервиса передается в основное приложение через переменную окружения:</p>
+<pre><code class="language-text">PARSER_API_URL=http://parser:8001
+</code></pre>
+<p>Имя <code>parser</code> — это имя сервиса в Docker Compose. Внутри общей Docker-сети контейнер <code>api</code> может обращаться к контейнеру парсера по этому имени.</p>
+<h2 id="_3">Вызов парсера через очередь</h2>
+<p>Для фонового запуска парсинга добавлены Celery и Redis.</p>
+<p>Используются новые файлы:</p>
+<table>
+<thead>
+<tr>
+<th>Файл</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lr_1/lab_1/core/celery_app.py</code></td>
+<td>настройка Celery</td>
+</tr>
+<tr>
+<td><code>lr_1/lab_1/core/parser_tasks.py</code></td>
+<td>задача Celery для вызова parser API</td>
+</tr>
+<tr>
+<td><code>lr_1/lab_1/api/parser.py</code></td>
+<td>HTTP-эндпоинты основного API для прямого и фонового запуска</td>
+</tr>
+</tbody>
+</table>
+<p>Redis используется как брокер сообщений и backend для хранения результата задачи:</p>
+<pre><code class="language-text">CELERY_BROKER_URL=redis://redis:6379/0
+CELERY_RESULT_BACKEND=redis://redis:6379/0
+</code></pre>
+<p>Маршрут для постановки задачи в очередь:</p>
+<pre><code class="language-text">POST /parser/parse/async
+</code></pre>
+<p>Пример:</p>
+<pre><code class="language-bash">curl -X POST http://localhost:8000/parser/parse/async \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;url&quot;:&quot;https://docs.python.org/3/library/threading.html&quot;}'
+</code></pre>
+<p>Ответ содержит идентификатор задачи:</p>
+<pre><code class="language-json">{
+  &quot;task_id&quot;: &quot;...&quot;,
+  &quot;status&quot;: &quot;queued&quot;,
+  &quot;message&quot;: &quot;Parsing task has been added to the Celery queue&quot;
+}
+</code></pre>
+<p>Проверка статуса:</p>
+<pre><code class="language-bash">curl http://localhost:8000/parser/parse/tasks/&lt;task_id&gt;
+</code></pre>
+<p>Когда задача выполнится, в ответе появится результат работы парсера.</p>
+<h2 id="dockerfile-api">Dockerfile основного API</h2>
+<p>Файл <code>api.Dockerfile</code> упаковывает приложение из <code>lr_1/lab_1</code>.</p>
+<pre><code class="language-dockerfile">FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+COPY lr_3/requirements-api.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+COPY lr_1/lab_1 /app/lr_1/lab_1
+
+WORKDIR /app/lr_1/lab_1
+
+CMD [&quot;uvicorn&quot;, &quot;main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;8000&quot;]
+</code></pre>
+<h2 id="dockerfile">Dockerfile парсера</h2>
+<p>Файл <code>parser.Dockerfile</code> упаковывает отдельное FastAPI-приложение парсера и код парсера из лабораторной работы 2.</p>
+<pre><code class="language-dockerfile">FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app/lr_2/task_2:/app/lr_1/lab_1:/app/lr_3
+
+WORKDIR /app
+
+COPY lr_3/requirements-parser.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+COPY lr_1/lab_1 /app/lr_1/lab_1
+COPY lr_2/task_2 /app/lr_2/task_2
+COPY lr_3/parser_service /app/lr_3/parser_service
+
+CMD [&quot;uvicorn&quot;, &quot;parser_service.main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;8001&quot;]
+</code></pre>
+<h2 id="docker-compose">Docker Compose</h2>
+<p>Файл <code>docker-compose.yml</code> объединяет пять сервисов:</p>
+<table>
+<thead>
+<tr>
+<th>Сервис</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>db</code></td>
+<td>контейнер PostgreSQL</td>
+</tr>
+<tr>
+<td><code>api</code></td>
+<td>основное FastAPI-приложение</td>
+</tr>
+<tr>
+<td><code>parser</code></td>
+<td>FastAPI-приложение для вызова парсера</td>
+</tr>
+<tr>
+<td><code>redis</code></td>
+<td>брокер сообщений и хранилище результатов Celery</td>
+</tr>
+<tr>
+<td><code>celery-worker</code></td>
+<td>фоновый обработчик задач</td>
+</tr>
+</tbody>
+</table>
+<p>Основные настройки:</p>
+<ul>
+<li><code>api</code> доступен на порту <code>8000</code>;</li>
+<li><code>parser</code> доступен на порту <code>8001</code>;</li>
+<li>Redis доступен на порту <code>6379</code>;</li>
+<li>PostgreSQL внутри Docker доступен сервисам по имени <code>db</code>;</li>
+<li>наружу PostgreSQL проброшен на порт <code>5434</code>, чтобы не конфликтовать с локальной базой на <code>5432</code>;</li>
+<li>для PostgreSQL и Redis настроены <code>healthcheck</code>, а зависимые сервисы запускаются после готовности инфраструктуры.</li>
+</ul>
+<h2 id="_4">Запуск</h2>
+<p>Из папки лабораторной работы:</p>
+<pre><code class="language-bash">cd students/k3340/Ermakov_Makism/lr_3
+docker compose up --build
+</code></pre>
+<p>После запуска доступны:</p>
+<table>
+<thead>
+<tr>
+<th>Адрес</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>http://localhost:8000</code></td>
+<td>основное API</td>
+</tr>
+<tr>
+<td><code>http://localhost:8000/docs</code></td>
+<td>Swagger основного API</td>
+</tr>
+<tr>
+<td><code>http://localhost:8001</code></td>
+<td>API парсера</td>
+</tr>
+<tr>
+<td><code>http://localhost:8001/docs</code></td>
+<td>Swagger API парсера</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">Проверка результата</h2>
+<p>Запуск парсера:</p>
+<pre><code class="language-bash">curl -X POST http://localhost:8001/parse \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;url&quot;:&quot;https://docs.python.org/3/library/asyncio.html&quot;}'
+</code></pre>
+<p>Запуск парсера через основное API:</p>
+<pre><code class="language-bash">curl -X POST http://localhost:8000/parser/parse \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;url&quot;:&quot;https://docs.python.org/3/library/asyncio.html&quot;}'
+</code></pre>
+<p>Запуск парсера через очередь:</p>
+<pre><code class="language-bash">curl -X POST http://localhost:8000/parser/parse/async \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{&quot;url&quot;:&quot;https://docs.python.org/3/library/threading.html&quot;}'
+</code></pre>
+<p>Проверка сохраненных задач через основное API:</p>
+<pre><code class="language-bash">curl http://localhost:8000/tasks/
+</code></pre>
+<p>Если запись уже была создана ранее, парсер обновит существующую задачу, а не создаст дубликат.</p>
+<h2 id="_6">Вывод</h2>
+<p>В результате лабораторной работы основное FastAPI-приложение, база PostgreSQL, parser API, Redis и Celery worker запускаются как единая Docker Compose-конфигурация. Парсер доступен напрямую по HTTP, интегрирован в основное API и может запускаться в фоне через очередь задач.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

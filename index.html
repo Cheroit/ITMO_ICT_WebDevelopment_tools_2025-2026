@@ -79,6 +79,15 @@
 </li>
                                 </ul>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Лабораторная работа 3</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="lr3/" class="dropdown-item">Обзор</a>
+</li>
+                                </ul>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
@@ -155,6 +164,7 @@
 <li>параллельный подсчет суммы большого диапазона чисел;</li>
 <li>параллельный парсинг веб-страниц с сохранением результата в базу данных.</li>
 </ul>
+<p>В <code>Лабораторной работе 3</code> приложение из ЛР 1, база PostgreSQL и парсер из ЛР 2 упакованы в Docker. Для парсера создан отдельный HTTP-сервис на FastAPI, а также добавлен фоновый запуск задач через Celery и Redis.</p>
 <h2 id="_3">Структура хранения материалов</h2>
 <p>В репозитории используются две разные структуры:</p>
 <ul>
@@ -165,7 +175,8 @@
 <pre><code class="language-text">students/k3340/Ermakov_Makism/
 ├─ docs/
 │  ├─ lr1/
-│  └─ lr2/
+│  ├─ lr2/
+│  └─ lr3/
 ├─ lr_1/
 │  ├─ practice_1_1/
 │  ├─ practice_1_2/
@@ -174,12 +185,14 @@
 ├─ lr_2/
 │  ├─ task_1/
 │  └─ task_2/
+├─ lr_3/
+│  └─ parser_service/
 └─ mkdocs.yml
 </code></pre>
 <p>Такой подход удобен по двум причинам:</p>
 <ul>
 <li>код и отчет не смешиваются;</li>
-<li>при добавлении <code>ЛР 2</code> достаточно создать новый блок страниц <code>docs/lr2/</code> и новый пункт в <code>mkdocs.yml</code>.</li>
+<li>при добавлении новой лабораторной достаточно создать новый блок страниц в <code>docs/</code> и новый пункт в <code>mkdocs.yml</code>.</li>
 </ul>
 <h2 id="_4">Что содержится в отчете</h2>
 <p>Для каждой работы в отчете приводятся:</p>
@@ -292,5 +305,5 @@ mkdocs serve
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-05-06 17:23:00.165058+00:00
+Build Date UTC : 2026-05-22 00:13:21.425010+00:00
 -->
